@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến kiểu dữ liệu và toán tử </title>
+</head>
+<body>
+<script>
+// khai báo biến
+ let nhapVatLy;
+ let nhapHoaHoc;
+ let nhapSinhHoc;
+
+// sủ dụng prompt để lấy dữ liệu (input)
+
+
+nhapVatLy = prompt("Nhập điểm vật lý");
+ nhapHoaHoc = prompt("Nhập điểm hóa học");
+ nhapSinhHoc = prompt("Nhập điểm sinh học");
+
+// Sử dụng hàm parseFloat() để chuyển kiểu dữ liệu từ chuỗi sang số thực
+
+
+    let vatly = parseFloat(nhapVatLy);
+ let hoa = parseFloat(nhapHoaHoc);
+ let sinhHoc = parseFloat( nhapSinhHoc);
+
+// tính điểm tb
+
+ let diemTB = (vatly + hoa + sinhHoc ) / 3;
+
+ // in điểm tn ra màng hình
+
+ document.write("Điểm trung binh 3 môn là: " + diemTB);
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

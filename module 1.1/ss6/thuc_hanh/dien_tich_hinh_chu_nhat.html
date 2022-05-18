@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIỆN TÍCH HÌNH CHỮ NHẬT</title>
+</head>
+<body>
+<script>
+    // khai báo biến nhập chiều dài và chiều rộng
+
+    let inputWidth;
+    let inputHeight;
+    // sủ dụng prompt để lấy dữ liệu (input)
+
+    inputWidth = prompt("Enter the width");
+    inputHeight = prompt("Enter the height");
+    // Sử dụng hàm parseInt() để chuyển kiểu dữ liệu từ chuỗi sang số nguyên.
+
+    let width = parseInt(inputWidth);
+    let height = parseInt(inputHeight);
+    // Tính diện tích hinhg chữ nhật
+
+    let area = width * height;
+    // in diện tích hình chữ nhật ra màng hình
+    document.write("width: " + width );
+
+    document.write('<br/>');
+
+    document.write("height: " + height);
+
+    document.write('<br/>');
+
+
+    document.write("The area is: " + area);
+
+</script>
+
+</body>
+</html>

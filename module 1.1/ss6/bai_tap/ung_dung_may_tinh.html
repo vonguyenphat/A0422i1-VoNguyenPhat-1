@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng máy tính</title>
+</head>
+<body>
+<h2> Caculator </h2>
+<input type="number" id="giatri1">
+<input type="number" id="giatri2">
+<br>
+<br>
+<button onclick="cong()" name="cong">Addition (+)</button>
+<button onclick="tru()" name="tru">Subtraction (-)</button>
+<button onclick="tich()" name="Nhan">Multiplication (X)</button>
+<button onclick="thuong()" name="chia">Division (/)</button>
+
+<script>
+    function cong() {
+    let giatrivao1 = document.getElementById('giatri1').value;
+        // ép kiểu dữ liệu
+    giatrivao1 = Number.parseFloat(giatrivao1);
+        // ép kiểu dữ liệu
+    let giatrivao2 = document.getElementById('giatri2').value;
+    giatrivao2 = Number.parseFloat(giatrivao2);
+    alert('tổng hai số vừa nhập là '+ (giatrivao1 + giatrivao2));
+    }
+    function tru() {
+        let giatrivao1 = document.getElementById('giatri1').value;
+        giatrivao1 = Number.parseFloat(giatrivao1);
+        let giatrivao2 = document.getElementById('giatri2').value;
+        giatrivao2 = Number.parseFloat(giatrivao2);
+        alert('hiệu hai số vừa nhập là '+ (giatrivao1 - giatrivao2));
+    }
+    function tich() {
+        let giatrivao1 = document.getElementById('giatri1').value;
+        // ép kiểu dữ liệu gián tiếp khai báo thêm biến
+        let a1 = parseFloat(giatrivao1);
+        let giatrivao2 = document.getElementById('giatri2').value;
+        // ép kiểu dữ liệu gián tiếp khai báo thêm biến
+
+        let a2 = parseFloat(giatrivao2);
+        alert('Tích hai số vừa nhập là '+ (a1 * a2));
+    }
+    function thuong() {
+        let giatrivao1 = document.getElementById('giatri1').value;
+        // ép kiểu dữ liệu
+        giatrivao1 = Number.parseFloat(giatrivao1);
+        let giatrivao2 = document.getElementById('giatri2').value;
+        // ép kiểu dữ liệu
+        giatrivao2 = Number.parseFloat(giatrivao2);
+        alert('Thương hai số vừa nhập là '+ (giatrivao1 / giatrivao2));
+    }
+
+</script>
+
+
+</body>
+</html>

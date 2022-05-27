@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 9</title>
+</head>
+<body>
+<h2>Kiểm tra ba cạnh có phải tam giác </h2>
+nhập cạnh thứ nhất <input type="number" id="inputCanh1">
+nhập cạnh thứ hai <input type="number" id="inputCanh2">
+nhập cạnh thứ ba <input type="number" id="inputCanh3">
+<br><br>
+<button onclick="baiso9()">Kiểm tra</button>
+<p id="bai9"></p>
+    <script>
+      function baiso9()
+      {
+          let canhthuNhat = Number.parseFloat(document.getElementById("inputCanh1").value);
+          let canhthuHai = Number.parseFloat(document.getElementById("inputCanh2").value);
+          let canhthuBa = Number.parseFloat(document.getElementById("inputCanh3").value);
+
+          if (canhthuNhat > 0 && canhthuHai > 0 && canhthuBa > 0 )
+          {
+              if (canhthuNhat + canhthuHai > canhthuBa && canhthuHai + canhthuBa > canhthuNhat && canhthuHai + canhthuBa > canhthuHai)
+              {
+                  document.getElementById("bai9").innerHTML = " là ba cạnh của một tam giác ";
+
+              }else {document.getElementById("bai9").innerHTML = " cạnh " + canhthuNhat + " cạnh " + canhthuHai + " cạnh " + canhthuBa + " không phải là ba cạnh của một tam giác ";}
+          }else {document.getElementById("bai9").innerHTML = " cạnh " + canhthuNhat + " cạnh " + canhthuHai + " cạnh " + canhthuBa + " không phải là ba cạnh của một tam giác ";
+                  }
+      }
+    </script>
+</body>
+</html>

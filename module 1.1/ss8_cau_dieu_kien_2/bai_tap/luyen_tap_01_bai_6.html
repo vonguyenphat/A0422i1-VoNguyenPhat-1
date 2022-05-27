@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số hoa hồng với mức tiền nhận được</title>
+    <style>
+        body {
+            background-image:url("https://inkythuatso.com/uploads/thumbnails/800/2022/03/5131850-23-14-02-30.jpg") ;
+        }
+       .color{
+           background-color: cadetblue;
+           color: white;
+       }
+    </style>
+
+</head>
+<body>
+<h2><span style="background-color: cornflowerblue;color: yellow "> Hoa hồng nhận được theo mức doanh số bán hàng</span></h2>
+<h4 class="color">Cửa hàng của bạn nhận gửi bán sản phẩm cho một công ty khác và sau mỗi tháng bạn cần tính toán số tiền hoa hồng bạn nhận được. Với mức hoa hồng theo doanh số bán hàng như sau</h4>
+<p class="color">5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu </p>
+<p class="color">10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu</p>
+<p class="color">20 % nếu tổng doanh số là lớn hơn 300 triệu</p>
+<h3><span style="background-color: red; color: honeydew" "> nhập số tiền</span></h3>
+<input type="number" id="inputMoney"> <br> <br>
+
+<button onclick="outCommission()"> số hoa hồng bạn nhận được </button>
+<p><span id="tien"; style="background-color: red; color: white"></span></p>
+
+
+<script>
+    function outCommission()
+    {
+        let moNey = document.getElementById('inputMoney').value;
+        moNey = Number.parseFloat(moNey);
+        if (moNey <= 100)
+        {
+            let moneyHoahong = (moNey*5)/100;
+        document.getElementById("tien").innerHTML = "Với tổng số là " + moNey + " thì số hoa hồng là " + moneyHoahong+"%";
+        }else if (moNey<=300)
+        {
+            moneyHoahong = (moNey*10)/100;
+            document.getElementById("tien").innerHTML = "Với tổng số là " + moNey + " thì số hoa hồng là " + moneyHoahong+"%";
+        }else
+        {
+            moneyHoahong = (moNey*20)/100;
+            document.getElementById("tien").innerHTML = "Với tổng số là " + moNey + " thì số hoa hồng là " + moneyHoahong+"%";
+        }
+    }
+</script>
+</body>
+</html>

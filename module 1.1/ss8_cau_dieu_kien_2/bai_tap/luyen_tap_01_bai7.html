@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính gói cước điện thoại</title>
+</head>
+<body>
+<h1>Gói cước điện thoại</h1>
+<h4>Phí thuê bao bắt buộc là 25 nghìn.</h4>
+<h5>600 đồng cho mỗi gọi của 50 phút đầu tiên.</h5>
+<h5>400 đồng cho mỗi phút gọi của 150 phút tiếp theo.</h5>
+<h5>200 đồng cho bất kỳ mỗi phút nào sau 200  phút đầu tiên.</h5>
+
+Nhập số thời gian bạn gọi <input type="number" id="inputMinute">
+
+<button onclick="onclickbai7()">Kiếm tra số tiền cần phải trả</button>
+
+<!--// In số tiền ra màng hình-->
+<p id="luyentap1bai7"></p>
+<script>
+    function onclickbai7()
+    {
+        let minute = Number.parseFloat(document.getElementById("inputMinute").value);
+
+        let phi = 0;
+        let phicodinh = 25;
+
+        if (minute > 200)
+        {
+            phi = parseFloat((minute - 200)*200+150*400+50*600);
+           let tong = 0.01*phi+phicodinh;
+           document.getElementById("luyentap1bai7").innerHTML = "Số tiền bạn cần phải trả là " + tong + " Nghìn";
+        }else if (minute > 50)
+            {
+                phi = parseFloat((minute - 50)*400+50*600);
+                tong = 0.01*phi+phicodinh;
+                document.getElementById("luyentap1bai7").innerHTML = "Số tiền bạn cần phải trả là " + tong + " Nghìn";
+            }else
+                {
+                    phi = minute*600;
+                    tong = 0.01*phi+phicodinh;
+                    document.getElementById("luyentap1bai7").innerHTML = "Số tiền bạn cần phải trả là " + tong + " Nghìn";
+                }
+    }
+</script>
+</body>
+</html>

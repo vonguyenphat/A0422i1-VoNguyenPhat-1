@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số cân nặng cơ thể</title>
+</head>
+<body>
+Nhập cân nặng <input type="" id="weight">
+Nhập chiều cao  <input type="" id="height">
+<button onclick="outputweight()" >Xem kết quả cân nặng của bạn</button>
+<script>
+    function outputweight() {
+        let inputWeight = document.getElementById('weight').value;
+        let inputHeight = document.getElementById('height').value;
+        inputWeight = Number.parseFloat(inputWeight);
+        inputHeight = Number.parseFloat(inputHeight);
+        let bmi = inputWeight / (inputHeight*inputHeight);
+        if (bmi < 18)
+            document.write("Thiếu cân");
+        else if (bmi < 25.0)
+            document.write("Bình thường");
+        else if (bmi < 30.0)
+            document.write("Thừa cân");
+        else
+            document.write("Béo phì");
+    }
+
+</script>
+</body>
+</html>

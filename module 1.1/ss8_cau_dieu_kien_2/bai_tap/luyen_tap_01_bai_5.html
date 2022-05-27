@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra</title>
+</head>
+<body>
+<h2>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra</h2>
+
+
+    <p>Nhập điểm các bài kiểm tra</p>
+    <input type="number" id="inputPointKT"><br>
+
+
+    <p>Nhập điểm bài kiểm tra giữa kỳ </p>
+    <input type="number" id="inputPointKTGK">
+
+    <p>Nhập điểm bài kiểm tra cuối ky </p>
+    <input type="number" id="inputPointKTCK">
+
+<button onclick="chiuthua()">Xem kết quả của bạn</button>
+<p id="tes"> . </p>
+<script>
+    function chiuthua()
+    {
+        let pointKT = document.getElementById('inputPointKT').value;
+        let pointKTGK = document.getElementById('inputPointKTGK').value;
+        let pointKTCK = document.getElementById('inputPointKTCK').value;
+
+        pointKT = Number.parseFloat(pointKT);
+        pointKTGK = Number.parseFloat(pointKTGK);
+        pointKTCK = Number.parseFloat((pointKTCK));
+
+        let diemTb = parseFloat((pointKT + pointKTGK + pointKTCK )/3);
+
+        if (diemTb >= 9)
+        {
+            document.getElementById("tes").innerHTML = "Hạng A";
+        }else if (diemTb>=7) {
+            document.getElementById("tes").innerHTML = "Hạng B";
+                }else if (diemTb >= 5)
+                {
+            document.getElementById("tes").innerHTML = "Hạng C";
+                }else    document.getElementById("tes").innerHTML = "Hạng F";
+    }
+</script>
+</body>
+</html>

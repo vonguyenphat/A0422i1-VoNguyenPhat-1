@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số tuổi</title>
+</head>
+<body>
+nhập số tuổi <input type="number" id="inputTuoi">
+<button onclick="bai8()">Enter</button>
+<p id="tuoi"></p>
+<script>
+    function bai8() {
+    let tuoi = Number.parseFloat(document.getElementById("inputTuoi").value);
+    if (tuoi>0 && tuoi<120)
+        document.getElementById("tuoi").innerHTML = "Số tuổi bạn vừa nhập hợp lệ";
+    else         document.getElementById("tuoi").innerHTML = "Số tuổi bạn vừa nhập không hợp lệ"''
+    }
+</script>
+</body>
+</html>

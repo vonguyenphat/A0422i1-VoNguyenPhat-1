@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền thuế thu nhập</title>
+</head>
+<body>
+<h2>Tính thuế thu nhập cá nhân </h2>
+Nhập số tiền lương <input type="number" id="inputSalary">
+<button onclick="taxMoney()">kết quả tiền thuế</button>
+<p id="bai11"></p>
+<script>
+    let thuebac1 = 1;
+    let thuebac2 = 0.05;
+    let thuebac3 = 0.1;
+    let thuebac4 = 0.15;
+    let thuebac5 = 0.2;
+    let thuebac6 = 0.25;
+    let thuebac7 = 0.3;
+    let thuebac8 = 0.35;
+    function taxMoney()
+    {
+        let salary = Number.parseFloat(document.getElementById("inputSalary").value);
+
+        if (salary <= 4000000)
+        {
+            let tienThue = (salary* thuebac1);
+            document.getElementById("bai11").innerHTML = "Thuế lương của bạn là " + tienThue;
+        }else if (salary <= 6000000)
+            {
+                tienThue = parseFloat(salary* thuebac2);
+                document.getElementById("bai11").innerHTML = "Thuế lương của bạn là " + tienThue;
+            }else if (salary <= 9000000)
+                {
+                    tienThue = parseFloat(salary * thuebac3);
+                    document.getElementById("bai11").innerHTML = "Thuế lương của bạn là " + tienThue;
+                }else if (salary <= 14000000)
+                    {
+                        tienThue = parseFloat(salary * thuebac4);
+                        document.getElementById("bai11").innerHTML = "Thuế lương của bạn là " + tienThue;
+                    }else if (salary <= 24000000)
+                        {
+                            tienThue = parseFloat(salary * thuebac5);
+                            document.getElementById("bai11").innerHTML = "Thuế lương của bạn là " + tienThue;
+                        }else if (salary <= 44000000)
+                            {
+                                tienThue = parseFloat(salary * thuebac6 );
+                                document.getElementById("bai11").innerHTML = "Thuế lương của bạn là " + tienThue;
+                            }else if (salary <= 84000000)
+                                {
+                                    tienThue = parseFloat(salary * thuebac7);
+                                    document.getElementById("bai11").innerHTML = "Thuế lương của bạn là " + tienThue;
+                                }else
+                                    {
+                                        tienThue = parseFloat(salary * thuebac8);
+                                        document.getElementById("bai11").innerHTML = "Thuế lương của bạn là " + tienThue;
+                                    }
+    }
+</script>
+</body>
+</html>

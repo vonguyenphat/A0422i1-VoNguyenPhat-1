@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<h2>Giải phương trình bậc 2: Ax2 + Bx + C = 0 </h2>
+Nhập hệ số A <input type="number" id="inputAx">
+<p></p>
+Nhập hệ số B <input type="number" id="inputBx">
+<p></p>
+Nhập hệ số C <input type="number" id="inputC">
+<button onclick="phuongtrinhbac2()">Kiểm tra kết quả</button>
+<p id="phuongtrinhbac2"></p>
+<script>
+    function phuongtrinhbac2()
+    {
+        let ax = Number.parseFloat(document.getElementById("inputAx").value);
+        let bx = Number.parseFloat(document.getElementById("inputBx").value);
+        let c = Number.parseFloat(document.getElementById("inputC").value);
+        // kiểm tra các hệ số
+        if (ax == 0) {
+            if (bx == 0) {
+                document.getElementById("phuongtrinhbac2").innerHTML = "Phương trình vô nghiệm ";
+            } else {
+                let  xx = -c/bx;
+                document.getElementById("phuongtrinhbac2").innerHTML = "Phương trình có một nghiệm x = "+ xx;
+            }
+        }
+        // tính delta
+        let delta = Number.parseFloat(bx*bx - 4*ax*c);
+        // Tính nghiệm
+        if (delta > 0) {
+            let x1 = ((-bx + Math.sqrt(delta)) / (2*ax));
+            let x2 = ((-bx - Math.sqrt(delta)) / (2*ax));
+            document.getElementById("phuongtrinhbac2").innerHTML = "Phuong trinh co 2 nghiem la: x1 = "+ x1 +" va x2 = "+x2 ;
+        } else if (delta == 0) {
+            let x1 = (-bx / (2 * ax));
+            document.getElementById("phuongtrinhbac2").innerHTML = "Phong trinh co nghiem kep: x1 = x2 = " + x1 ;
+        } else {
+            document.getElementById("phuongtrinhbac2").innerHTML = "phuongtrinhbac2";
+        }
+    }
+</script>
+</body>
+</html>

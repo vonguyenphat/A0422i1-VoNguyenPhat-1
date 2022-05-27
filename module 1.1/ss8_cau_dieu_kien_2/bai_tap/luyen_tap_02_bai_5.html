@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích tam giác vuông biết hai cạnh kề a và b</title>
+</head>
+<body>
+<h2>Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b</h2>
+
+    <td>Nhập cạnh thứ nhất <input type="number" id="inputCanhA"></td>
+    <td>Nhạp cạnh thứ hai <input type="number" id="inputCanhB"></td>
+    <td><button onclick="clickTinh()">Kiểm tra kết quả </button></td>
+    <p id="dientich"></p>
+</table>
+<script>
+    function clickTinh() {
+        let canhA = Number.parseFloat(document.getElementById("inputCanhA").value);
+        let canhB = Number.parseFloat(document.getElementById("inputCanhB").value);
+            if (canhA>0 && canhB > 0)
+            {
+                let dientichS = (canhA*canhB)/2;
+                document.getElementById("dientich").innerHTML = "Diện tích tam giác vuông là " + dientichS;
+
+            }else document.getElementById("dientich").innerHTML = "Bạn nhập sai dữ liệu "
+    }
+</script>
+</body>
+</html>
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table tr,td {
+            border: 1px solid black;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+
+<div style="border: 1px solid black;width: 135px; text-align: center">
+    <smail>MÁY TÍNH CASIO</smail>
+    <table>
+        <tr>
+            <td colspan="4" style="height: 20px"><span  style="color: black" id="ketQua"></span></td>
+        </tr>
+        <tr>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('1')">1</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('2')">2</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('3')">3</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('4')">4</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('5')">5</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('6')">6</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('7')">7</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('8')">8</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('9')">9</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('*')">X</button></td>
+        </tr>
+        <tr>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('C')">C</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('0')">0</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('=')">=</button></td>
+            <td><button style="color: black;background-color: gainsboro" onclick="mayTinh('/')">/</button></td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    function mayTinh(x) {
+        let value =document.getElementById('ketQua').innerHTML;
+        switch (x){
+            case"1":
+            case"2":
+            case"3":
+            case"+":
+            case"4":
+            case"5":
+            case"6":
+            case"-":
+            case"7":
+            case"8":
+            case"9":
+            case"*":
+            case"0":
+            case"/":
+                value= value + x ;
+                break;
+                value= value - x ;
+                break;
+                value= value * x ;
+                break;
+                value= value / x ;
+                break;
+            case "=":
+                value = eval(value);
+                break;
+            case"C":
+                value = '';
+                break;
+        }
+        document.getElementById("ketQua").innerHTML = value;
+    }
+</script>
+</body>
+</html>

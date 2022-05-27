@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bật 1</title>
+</head>
+<body>
+<h2>Giải phương trình bận 1: ax + b = 0</h2>
+Nhập giá trị a <input type="number" id="inputA">
+<p></p>
+Nhập giá trị b <input type="number" id="inputB">
+<button onclick="phuongtrinhbat1()">Kiểm tra kết quả</button>
+<p id="ketquaphuongtrinhbac1"></p>
+<script>
+    function phuongtrinhbat1() {
+        let  a = Number.parseFloat(document.getElementById("inputA").value);
+        let  b = Number.parseFloat(document.getElementById("inputB").value);
+            if (a == 0)
+            {
+                if (b ==0)
+                {
+                    document.getElementById("ketquaphuongtrinhbac1").innerHTML = "Phương trình vô số nghiệm ";
+                }else document.getElementById("ketquaphuongtrinhbac1").innerHTML = "Phương trình vô nghiệm ";
+
+            }else
+            {
+                let x = -b/a;
+                document.getElementById("ketquaphuongtrinhbac1").innerHTML = "Phương trình Ax + b = 0 có  nghiệm: x = "+ x;
+            }
+    }
+</script>
+</body>
+</html>

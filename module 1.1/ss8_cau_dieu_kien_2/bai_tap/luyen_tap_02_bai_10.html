@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá tiền điện </title>
+</head>
+<body>
+<h2>Tính giá tiền điện</h2>
+nhâp số kWh sử dụng <input type="number" id="inputsoDien">
+<button onclick="tinhtiendien()">Giá tiền là </button>
+<p id="bai10"></p>
+<script>
+    let bac1 = parseFloat(1678);
+    let bac2 = parseFloat(1734);
+    let bac3 = parseFloat(2014);
+    let bac4 = parseFloat(2536);
+    let bac5 = parseFloat(2834);
+    let bac6 = parseFloat(2927);
+    function tinhtiendien()
+    {
+        let soDien = Number.parseFloat(document.getElementById("inputsoDien").value);
+        if (soDien < 0)
+        {
+            document.getElementById("bai10").innerHTML = "Bạn nhập số điện không hợp lệ ";
+        }else if (soDien <= 50 )
+        {
+            let tienDien = soDien * bac1;
+            document.getElementById("bai10").innerHTML = "Số tiền bạn cần phải trả là " + tienDien + " VNĐ";
+        }else if (soDien <= 100)
+        {
+            tienDien = soDien * bac2;
+            document.getElementById("bai10").innerHTML = "Số tiền bạn cần phải trả là " + tienDien + " VNĐ";
+        }else if (soDien <= 200)
+        {
+            tienDien = soDien * bac3;
+            document.getElementById("bai10").innerHTML = "Số tiền bạn cần phải trả là " + tienDien + " VNĐ";
+        }else if (soDien <= 300)
+        {
+            tienDien = soDien * bac4;
+            document.getElementById("bai10").innerHTML = "Số tiền bạn cần phải trả là " + tienDien + " VNĐ";
+        }else if (soDien <= 400)
+        {
+            tienDien = soDien * bac5;
+            document.getElementById("bai10").innerHTML = "Số tiền bạn cần phải trả là " + tienDien + " VNĐ";
+        }else
+        {
+            tienDien = soDien * bac6;
+            document.getElementById("bai10").innerHTML = "Số tiền bạn cần phải trả là " + tienDien + " VNĐ";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu lệnh switch-case</title>
+</head>
+<body>
+Nhập sô tháng <input type="text" id="days">
+<button onclick="clickOutput()" >Tính số ngày </button>
+<script>
+    function clickOutput()
+    {
+        let day = document.getElementById('days').value;
+        switch (day)
+        {
+            case '1':
+            case '3':
+            case '5':
+            case '7':
+            case '8':
+            case '10':
+            case '12':
+                document.write('Tháng có 31 ngày');
+                break;
+            case '4':
+            case '6':
+            case '9':
+            case '11':
+                document.write('Tháng có 30 ngày');
+                break;
+            case '2': document.write('Tháng có 28 ngày');
+            break;
+        }
+    }
+</script>
+</body>
+</html>

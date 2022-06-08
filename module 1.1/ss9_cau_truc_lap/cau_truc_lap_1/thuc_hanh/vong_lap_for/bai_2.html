@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+<h2>Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa nhập vào.</h2>
+<script>
+    let num = prompt("Enter your number: ");
+    let tong = 0;
+    if (num > 0)
+    {
+        for (let i = 1; i <= num; i += 1)
+        {
+            tong = tong + i;
+        }
+    }else alert("Bạn phải nhập lớn hơn 0");
+    alert(tong)
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<h2> Viết chương trình nhận vào một số từ hộp thoại, việc nhập kết thúc khi người dùng nhập vào giá trị -1. Mỗi giá trị nhập được sẽ được hiển thị ra và thực hiện tính tổng các giá trị đó. </h2>
+<script>
+    let num = prompt("Enter a number: ");
+    let total = 0;
+    while( num != -1 )
+    {
+        num = parseInt(prompt("Enter a number: "));
+        alert(num);
+        total += num;
+    }
+    alert(total);
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 8</title>
+</head>
+<body>
+<button onclick="bai8()">Chơi</button>
+<script>
+    function bai8()
+    {
+        let inputDoanso = Number(prompt("Trò chơi đoán số "));
+        let inputSo = Number(prompt("Nhập số bạn muốn đoán "));
+        let ramdom ;
+        if (inputDoanso)
+            {
+                ramdom =Math.floor( Math.random()*inputSo);
+                if (inputSo == ramdom)
+                    {
+                        alert("Bạn đã đoán đúng ");
+
+                    }else
+                        alert("Bạn đã đoán sai ");
+                        alert("số radom là " + ramdom);
+            }
+
+
+    }
+</script>
+</body>
+</html>

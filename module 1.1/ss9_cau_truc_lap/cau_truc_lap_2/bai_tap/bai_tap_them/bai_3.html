@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<h2>S=1+1/2+1/3+....+1/n</h2>
+<input type="number" id="inputN">
+<button onclick="baitap2()">Kiểm tra kết quả</button>
+<p id="bai2"></p>
+<script>
+    function baitap2() {
+
+        let n = Number.parseFloat(document.getElementById('inputN').value)
+        let s = 0
+
+        for (let i = 1; i < n; i++) {
+            s = s + 1 / i;
+        }
+        document.getElementById("bai2").innerHTML = s;
+    }
+</script>
+</body>
+</html>

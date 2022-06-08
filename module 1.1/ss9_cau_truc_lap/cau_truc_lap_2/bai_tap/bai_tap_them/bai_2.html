@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+Year<input type="number" id="inputYear">
+Month<input type="number" id="inputMonth">
+<button onclick="bai3()">Kiểm tra</button>
+<p id="songay"></p>
+<script>
+    function bai3()
+    {
+        let year = Number.parseInt(document.getElementById("inputYear").value);// lấy dữ liệu từ input
+        let month = Number.parseInt(document.getElementById("inputMonth").value);
+        // switch kiểm tra tháng
+        switch (month)
+        {
+            // case kiểm tra số tháng
+            case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+            {
+                // in dữ liệu ra màng hình với id songay
+            document.getElementById("songay").innerHTML = "Tháng " + month + " năm "+year+" có 31 ngày";
+            break;
+            }
+            case 4:case 6:case 9:case 11:
+            {
+                document.getElementById("songay").innerHTML = "Tháng " + month + " năm "+year+" có 30 ngày";
+            }
+            case 2:
+            {
+                if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) // kiểm tra điều kiện xác định năm nhuận hay năm không nhuận
+                {
+                    document.getElementById("songay").innerHTML= "Năm "+year+ " là năm nhuận nên tháng "+month+" có 29 ngày";
+                }else document.getElementById("songay").innerHTML = "Năm "+year+ " là năm không nhuận nên tháng "+month+" có 28 ngày";
+                break;
+
+            }
+            default: // nếu số tháng vượt quá 12 thì sai
+            {
+                if (month >= 13)
+                {
+                    document.getElementById("songay").innerHTML= "Bạn nhập số tháng không hợp lệ";
+                }
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

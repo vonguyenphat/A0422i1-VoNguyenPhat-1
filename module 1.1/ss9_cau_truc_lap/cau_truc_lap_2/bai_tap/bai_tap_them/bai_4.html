@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+<h2>    Viết chương trình tính : <br>
+    S=15-1+1/2-1/3!+....+(-1)n  1/n!
+</h2>
+Nhập n  <input type="number" id="inputCau4">
+<button onclick="cau4()">Kết quả </button>
+<p id="ketquacau4"></p>
+</body>
+<script>
+    function cau4()
+    {
+        let n = Number.parseFloat(document.getElementById("inputCau4").value);
+        let s = 0;
+
+        for (let i=1;i<=n;i++)
+            {
+                s = s-1/i;
+            }
+        s = 15 - s;
+        document.getElementById("ketquacau4").innerHTML = "Đáp số là : "+ s;
+    }
+</script>
+</html>

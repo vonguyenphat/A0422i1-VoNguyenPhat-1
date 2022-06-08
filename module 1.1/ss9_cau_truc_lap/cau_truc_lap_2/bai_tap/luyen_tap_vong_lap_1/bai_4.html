@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let fibonacci = 0;
+    let i = 0;
+    // let n = parseInt(prompt(""));
+    // while (i < n)
+    //     {
+    //         document.write(fibonacci +  "<br>")
+    //         a=b;
+    //         b=fibonacci;
+    //         fibonacci= a + b;
+    //         if (fibonacci%5==0)
+    //             {
+    //                 document.write("số đầu tiên trong dãy fibonacci chia hết cho 5 là "+fibonacci);
+    //                 break;
+    //             }
+    //     }
+    for(let i=0; ;i++)
+    {
+
+        a=b;
+        b=fibonacci;
+        fibonacci=a+b;
+        
+        if (fibonacci%5==0)
+                            {
+                                document.write("số đầu tiên trong dãy fibonacci chia hết cho 5 là "+fibonacci);
+                                break;
+                            }
+
+    }
+</script>
+</body>
+</html>

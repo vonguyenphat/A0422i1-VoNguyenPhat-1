@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gia thừa</title>
+</head>
+<body>
+<h2>Tìm giai thừa</h2>
+<input type="number" id="inputGiaithua">
+<button onclick="bai2timgiathua()"> Kết quả </button>
+<p id="bai2timgiathua"></p>
+<script>
+    function bai2timgiathua()
+    {
+        let giaithua =Number.parseInt(document.getElementById("inputGiaithua").value);
+        let a = 1;
+        if (giaithua == 0|| giaithua==1)
+            {
+                document.getElementById("bai2timgiathua").innerHTML = "Giai thừa = 1";
+            }else if (giaithua < 0)
+                {
+                    document.getElementById("bai2timgiathua").innerHTML = "Bạn không được nhập số âm ";
+                }
+        for (let i=1;i<=giaithua;i++)
+                {
+                    a = a * i;
+                }
+        document.getElementById("bai2timgiathua").innerHTML = giaithua + "!" + " = " + a;
+    }
+</script>
+</body>
+</html>

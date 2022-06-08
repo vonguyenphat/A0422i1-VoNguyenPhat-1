@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 7</title>
+</head>
+<h2>7.	Tính tổng và tích các chữ số của một số nguyên dương m cho trước
+    (Ví dụ : m=234=> S=2+3+4=9, P=2*3*4=24)
+</h2>
+<input type="number" id="inputNumber">
+<button onclick="bai7()">Kết quả </button>
+<p id="baiso7a"></p>
+<p id="baiso7b"></p>
+
+<body>
+<script>
+    function bai7()
+    {
+        let number = Number.parseInt(document.getElementById("inputNumber").value);
+        let s= 0;
+        let tich = 1;
+    // Tính tổng  và tích các chữ số của một số nguyên
+        while (number>0)
+            {
+              let a = ( number % 10 );
+              // tính tổng
+
+              s = s + a;
+              s = parseInt(s);
+                // tính tích
+                tich = tich * a;
+                number = number/10;
+             
+            }
+
+        document.getElementById("baiso7a").innerHTML = s;
+        document.getElementById("baiso7b").innerHTML = tich;
+    }
+</script>
+</body>
+</html>

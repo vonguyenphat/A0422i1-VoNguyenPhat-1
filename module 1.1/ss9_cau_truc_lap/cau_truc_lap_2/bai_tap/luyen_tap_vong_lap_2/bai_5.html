@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài5</title>
+</head>
+<body>
+<script>
+    let n=5;
+    for (let i = 1; i <= n; i++)
+    {
+        // in dấu cách
+        for (let j = 0; j < n - i; j++)
+        {
+            document.write("&nbsp&nbsp");
+        }
+        //in ngôi sao
+        for (let k = 0; k < i; k++)
+        {
+            document.write('*');
+        }
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>

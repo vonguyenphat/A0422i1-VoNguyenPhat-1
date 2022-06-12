@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1 bài 8</title>
+</head>
+<body>
+<script>
+    let mang =[];
+    let n = Number.parseInt(prompt("Nhập số lượng phần tử trong mảng"));
+    let moc;
+    for (let i=0;i<n;i++)
+    {
+        mang[i] = prompt("Nhập phần tử thứ " + (i+1)+ " trong mảng");
+    }
+    document.write("Mang = ["+mang+"]<br>")
+    for (let i=0;i<n;i++)
+        {
+         for (let j =i+1;j<n;j++)
+             {
+                 if(mang[i] < mang[j])
+                 {
+                     moc = mang[i];
+                     mang[i] = mang[j];
+                     mang[j] = moc;
+                 }
+            }
+         }
+    document.write("Xắp xếp theo chiều giảm dần mang = ["+mang+"]<br>")
+
+</script>
+</body>
+</html>

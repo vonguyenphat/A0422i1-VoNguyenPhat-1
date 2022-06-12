@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1 bài 6</title>
+</head>
+<body>
+<script>
+    let mang=[];
+    let n = prompt("Nhập số lượng phần tử ");
+    flag = false;
+
+    for (let i=0;i<n;i++)
+        {
+            mang[i]=prompt("Nhập phần tử thứ: "+ (i+1) );
+        }
+    let v =(prompt("Nhập giá trị kiểm tra"));
+    for (let i=0;i<mang.length;i++)
+        {
+            if (v == mang[i])
+                {
+                    document.write("V is in array <br>");
+                    flag = true;
+                }
+        }
+    if (flag==false)
+    {
+        document.write("V is not in array <br>");
+    }
+
+    document.writeln("mang = [" + mang+"]<br>");
+
+</script>
+</body>
+</html>

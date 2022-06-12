@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1 bài 4</title>
+</head>
+<body>
+<h2>Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</h2>
+</body>
+<script>
+    let mang=[];
+    let n = Number.parseInt(prompt("Nhập số lượng phần tử của mảng"));
+    for (let i=0;i<n;i++)
+        {
+            mang[i] = Number(prompt("Nhập giá trị vào mảng tại vị trí " + (i+1) ));
+
+        }
+    document.write("Vị trí trước khi sắp xếp là: ");
+    document.write("mang = ["+mang+"]<br>");
+    document.write("Vị trí sau  khi sắp xếp đảo ngược là: ");
+    // lệnh reverse dùng để đảo ngược tất cả vị trí trong mảng
+    document.write("mang = ["+mang.reverse()+"]<br>");
+</script>
+</html>

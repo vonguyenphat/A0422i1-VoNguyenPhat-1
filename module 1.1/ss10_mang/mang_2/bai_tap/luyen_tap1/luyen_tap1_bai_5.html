@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1 bài 5</title>
+</head>
+<body>
+<h2>Viết chương trình đếm số nguyên âm trong một chuỗi</h2>
+<script>
+    let mangsoam = [], mang = [];
+    let n = Number.parseInt(prompt("Nhập số lượng phần tử trong mảng "))
+    for (let i=0;i<n;i++)
+        {
+         mang[i] = Number.parseInt(prompt("Nhập giá trị vào mảng tại vị trí: " + (i+1 )));
+         if (mang[i] < 0)
+             {
+                 mangsoam.push(mang[i])
+             }
+        }
+    document.write("tất cả các giá trị trong mang = ["+mang+"]<br>")
+    document.write("Mảng các số âm gồm "+mangsoam.length +" phần tử: mangsoam = ["+mangsoam+"]<br>")
+
+</script>
+</body>
+</html>

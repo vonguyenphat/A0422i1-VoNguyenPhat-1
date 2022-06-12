@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../luyen_tap1/.idea/luyen_tap1.iml" filepath="$PROJECT_DIR$/../luyen_tap1/.idea/luyen_tap1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../luyen_tap2/.idea/luyen_tap2.iml" filepath="$PROJECT_DIR$/../luyen_tap2/.idea/luyen_tap2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/su_dung_cac_ham_co_san_cua_mang.iml" filepath="$PROJECT_DIR$/.idea/su_dung_cac_ham_co_san_cua_mang.iml" />
+    </modules>
+  </component>
+</project>

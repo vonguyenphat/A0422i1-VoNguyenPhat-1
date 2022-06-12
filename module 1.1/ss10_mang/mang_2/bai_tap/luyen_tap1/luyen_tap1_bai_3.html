@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1 bài 3</title>
+</head>
+<body>
+<h2>Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.</h2>
+<script>
+    let mang = [];
+    let max = 0, vitri =  0, tongTB = 0;
+    let n = Number.parseInt(prompt("Nhập số lượng giá trị trong mảng "));
+    let i = 0;
+    // Nhập n giá trị vào mảng
+    do {
+        mang[i] = Number(prompt("Nhập giá trị vào mảng tại vị trí " + (i+1) ));
+        i++;
+
+    }while(i<n);
+    // tìm giá trị lớn nhất trong mảng
+    for ( i=0; i<mang.length;i++)
+        {
+            if (max < mang[i])
+                {
+                    max = mang[i];
+                    vitri = i;
+                }
+        }
+    // in ra giá trị trung bình của các phần tử trong mảng
+    for (i=0; i<mang.length;i++)
+        {
+            tongTB = tongTB + mang[i];
+        }
+    tongTB = tongTB / mang.length;
+    document.writeln("Phần tử lớn nhất trong mảng là "+ max + " tại vị trí "+ vitri +" trong mảng (tình từ 0) <br>");
+    document.writeln("Tổng giá trị trung bình của tất cả các phần tử trong mảng là: "+ tongTB)
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố </title>
+</head>
+
+<body>
+<h2>Kiểm tra số nguyên tố</h2>
+<input type="number" id="a">
+<button onclick="kiemtraSonguyento()"> Kiểm tra số nguyên tố </button>
+<p id="bai1"></p>
+<script>
+   // flag = 0: Là số nguyên tố
+
+    function kiemtraSonguyento() {
+        let kiemsonguyenTo =Number.parseInt(document.getElementById("a").value);
+        let flag = true;
+
+        if (kiemsonguyenTo < 2 )
+            {
+                document.getElementById("bai1").innerHTML = kiemsonguyenTo + " không phải số nguyên tố ";
+            }else
+                {
+            for (let i=2;i<kiemsonguyenTo-1;i++)
+                {
+                    if (kiemsonguyenTo%i == 0)
+                        {
+                            flag = false;
+                            break;
+                        }
+                }
+            if (flag== true)
+                {
+                    document.getElementById("bai1").innerHTML = kiemsonguyenTo + " là số nguyên tố ";
+                }else
+                    document.getElementById("bai1").innerHTML = kiemsonguyenTo + " không phải là số nguyên tố ";
+                }
+
+    }
+
+</script>
+</body>
+</html>

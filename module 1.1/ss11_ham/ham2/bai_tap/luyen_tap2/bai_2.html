@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let s;
+    let cv;
+    function bai2(r,pi)
+    {
+        // Diện tính hình tròn
+        s = (r*r)*pi;
+        document.write("Diện tích hình tròn " + s + "<br>")
+        // Chu vi hình tròn
+        cv = 2*r*pi;
+        document.write("Chu vi hình tròn " + cv)
+    }
+    let r = Number.parseFloat(prompt("input radius"))
+    let pi = Math.PI;
+    bai2(r,pi);
+
+
+</script>
+</body>
+</html>

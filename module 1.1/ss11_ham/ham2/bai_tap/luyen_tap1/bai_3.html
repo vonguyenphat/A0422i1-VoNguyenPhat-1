@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number1" value="a">
+<input type="number" id="number2" value="b">
+<button onclick="bai3()"> Enter </button>
+
+<script>
+    function bai3()
+    {
+        let a = Number.parseFloat(document.getElementById("number1").value);
+        let b = Number.parseFloat(document.getElementById("number2").value);
+        if (a<b)
+            {
+                alert("Giá trị a > b xin nhập lại");
+            }else
+                {
+                    alert("Tổng hai giá trị " + (a+b))
+                }
+    }
+</script>
+</body>
+</html>

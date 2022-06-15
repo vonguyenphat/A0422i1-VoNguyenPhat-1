@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let n = prompt("Nhập số lượng số nguyên trong mảng")
+    count = 0;
+
+    function bai9(x)
+    {
+
+        let c = prompt("Nhập kí tự kiểm tra")
+
+        for (let i=0;i<x.length;i++)
+            {
+                if (x[i]==c)
+                    {
+                        count++;
+                    }
+            }
+
+        if (count==0)
+        {
+            alert(-1)
+        }else  alert("số phần tử " + c + " lặp lại trong mảng là "+ count)
+
+        
+    }
+    for (let i=0;i<n;i++)
+    {
+        a[i] = prompt("Nhập số nguyên thứ " + (i+1) +": ")
+    }
+    bai9(a)
+
+
+</script>
+</body>
+</html>
